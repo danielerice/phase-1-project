@@ -1,9 +1,9 @@
 let hyperlink = document.getElementById("hyperLink")
-
+console.log(document.getElementById("hyperLink"))
 let notesForm = document.getElementById("notesForm")
-
+console.log(document.getElementById("notesForm"))
 let populateBtn = document.getElementById("populateBtn")
-
+console.log(document.getElementById("populateBtn"))
 function createNote(note) {
     let li = document.createElement('li')
     li.textContent = `${note}  `
@@ -19,22 +19,22 @@ function handleDelete(e) {
 }
 
 function drawCards() {
-    fetch("string representing a URL to a data source")
+    fetch("https://www.deckofcardsapi.com/api/deck/drawDeck1/draw/?count=2")
   .then(function (response) {
-    return response.json();
+    return response.json()
   })
   .then(function (data) {
-    console.log(data)
+    console.log(data);
   });
 }
 
 document.addEventListener('DOMContentLoaded', e => {
     
     notesForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+        e.preventDefault()
         console.log(e.target.notes.value)
-        createNote(e.target.notes.value);
-        notesForm.reset();
+        createNote(e.target.notes.value)
+        notesForm.reset()
       })
 
     populateBtn.addEventListener("click", e => {
