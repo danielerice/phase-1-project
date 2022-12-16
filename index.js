@@ -1,8 +1,8 @@
 let hyperlink = document.getElementById("hyperLink")
 
 let notesForm = document.getElementById("notesForm")
-console.log(document.getElementById("notesForm"))
-console.log(hyperlink.style.color)
+
+let populateBtn = document.getElementById("populateBtn")
 
 function createNote(note) {
     let li = document.createElement('li')
@@ -18,6 +18,16 @@ function handleDelete(e) {
     e.target.parentNode.remove()
 }
 
+function drawCards() {
+    fetch("string representing a URL to a data source")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data)
+  });
+}
+
 document.addEventListener('DOMContentLoaded', e => {
     
     notesForm.addEventListener('submit', (e) => {
@@ -26,6 +36,11 @@ document.addEventListener('DOMContentLoaded', e => {
         createNote(e.target.notes.value);
         notesForm.reset();
       })
+
+    populateBtn.addEventListener("click", e => {
+        console.log(populateBtn)
+        drawCards()
+    })
 
     /*hyperlink.addEventListener("mouseover", e => handleMouseOver(e))
     
