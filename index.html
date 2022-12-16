@@ -6,17 +6,45 @@
         <meta name="desciption" content="poker hand strength rater">
         <meta name="author" content="Daniel Rice">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .responsive {
+                width: 100%;
+                height: auto;
+                }
+        </style>
     </head>
     <body>
         <h1 class="header" id="title">Test Your Hand Strength</h1>
-        <p>number of players</p>
-        <select id="players" class="form">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-        </select>
+        <p></p>
+        <div id="playerHands" class="div">
+        <button>Populate Hands</button>
+        
+        <p>Player 1</p>
+        <div id="player1Hand" class="div">
+            <ul id="player1List">
+                
+            </ul>
+        </div>
+        <p>Player 2</p>
+        <div id="player2Hand" class="div">
+            <ul id="player2List">
+                
+            </ul>
+        </div>
+        <p>Player 3</p>
+        <div id="player3Hand" class="div">
+            <ul id="player3List">
+                
+            </ul>
+        </div>
+        </div>
+        <div id="notesDiv" class="div">
+        <p>Take notes here!</p>
+        <form id="notesForm">
+            <label for="notes">notes:</label><br>
+            <input type="text" id="notes" name="notes" value="your notes here"><br>
+        </form>
+        <p></p>
+        </div>
     </body>
 </html>
