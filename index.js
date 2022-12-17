@@ -60,15 +60,23 @@ document.addEventListener('DOMContentLoaded', e => {
         drawCards()
     })
 
-    /*hyperlink.addEventListener("mouseover", e => handleMouseOver(e))
+    hyperlink.addEventListener("mouseover", e => handleMouseOver(e))
     
-    function handleMouseOver (e) {
+    hyperlink.addEventListener("mouseout", e => handleMouseOut(e))
+    function handleMouseOver () {
         console.log(hyperlink.style.color)
         
         hyperlink.style.color= "red"
         
         console.log(hyperlink.style.color)
-    }*/
+    }
+
+    function handleMouseOut () {
+        console.log(hyperlink.style.color)
+
+        hyperlink.style.color = "blue"
+    }
+
 
 
 
