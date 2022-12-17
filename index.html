@@ -20,11 +20,17 @@
         <script defer type="text/javascript" src="index.js"></script>
         <h1 class="header" id="title">Test Your Hand Strength</h1>
         <p id="siteDescription">Hello! Welcome to the Hand Strength Test!
-            This site will show you how to rate your opening hand in Texas Hold 'Em based on the Chen Formula.
+            This site will show you how to rate your opening hand in Texas Hold 'Em based on the Chen Formula. 
+            to calculate your opening hand strength using the Chen Formula, first: score only your highest card.
+            A=10, K=8, Q=7, J=6, 10 through 2= half of card value. Multiply pairs by 2 of one card's value.
+            Minimum score for a pair is 5. Add 2 points if the cards are suited. Subtract points for gaps between cards. No gap= 0,
+            1 card gap= -1, 2 card gap= -2, 3 card gap= -4, 4 or more= -5. Aces are high for gap calculations so there would be a 4+ card gap for a hand with an ace and a three.
+            Add 1 point if there is a 0-1 gap and both cards are lower than a Queen. Then round half point scores up.
             For more information go to: <a id="hyperLink" style="color:blue;" href="https://www.thepokerbank.com/strategy/basic/starting-hand-selection/chen-formula/">https://www.thepokerbank.com/strategy/basic/starting-hand-selection/chen-formula/</a>
         </p>
         <div id="playerHands" class="div">
         <button id="populateBtn" >Populate Hands</button>
+        <!--<button id="calculateBtn" >Calculate Strength</button>-->
         
         <p>Player 1</p>
         <div id="player1Hand" class="div">
