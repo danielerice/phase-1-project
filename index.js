@@ -19,13 +19,30 @@ function handleDelete(e) {
 }
 
 function drawCards() {
-    fetch("https://www.deckofcardsapi.com/api/deck/drawDeck1/draw/?count=2")
+    fetch("https://www.deckofcardsapi.com/api/deck/new/draw/?count=6")
   .then(function (response) {
     return response.json()
   })
   .then(function (data) {
     console.log(data);
-  });
+    console.log(data.cards)
+    for (i = 0; i <= data.cards.length-1; i++) {
+        let newImg = document.createElement("img")
+        newImg.src=`${data.cards[i].image}`
+        if (i < 2) {
+            console.log(`${data.cards[i].image}`)
+            document.getElementById("player1List").appendChild(newImg)
+        } else if (i < 4) {
+            console.log(`${data.cards[i].image}`)
+            document.getElementById("player2List").appendChild(newImg)
+        } else {
+            console.log(`${data.cards[i].image}`)
+            document.getElementById("player3List").appendChild(newImg)
+        }
+    
+    }
+    
+});
 }
 
 document.addEventListener('DOMContentLoaded', e => {
