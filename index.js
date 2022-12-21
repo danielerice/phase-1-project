@@ -10,10 +10,12 @@ let notesForm = document.getElementById("notesForm")
 let populateBtn = document.getElementById("populateBtn")
 //console.log(document.getElementById("populateBtn"))
 
+
 //variable for the calculate button
 //let calculateBtn = document.getElementById("calculateBtn")
 //console.log(document.getElementById("calculateBtn"))
 
+let cardData = []
 
 function createNote(note) {
     let li = document.createElement('li')
@@ -42,6 +44,14 @@ function drawCards() {
     //console.log(data);
     console.log(data.cards)
     
+
+    data.cards.map((element) => {
+        console.log(element.code)
+        newObj= {code : element.code}
+        cardData.push(newObj)
+    });
+    console.log(cardData)
+
     for (i = 0; i <= data.cards.length-1; i++) {
         let newImg = document.createElement("img")
         newImg.src=`${data.cards[i].image}`
@@ -87,7 +97,7 @@ document.addEventListener('DOMContentLoaded', e => {
 
     //calls strengthCalc when button is clicked
    // calculateBtn.addEventListener("click", e => {
-        //console.log(document.getElementById("playerHands"))
+       // console.log(document.getElementById("playerHands"))
         //strengthCalc()
     //})
 
